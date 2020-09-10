@@ -70,7 +70,7 @@ $("#btn-login").click(function (){
             if (res.code == 0) {
                 localStorage.setItem("jwtToken", res.content.jwt_token)
                 localStorage.setItem("userInfo", JSON.stringify(res.content.user_info))
-                location.href = "/api/home"
+                location.href = "/home"
             }else if(res.code == 1001) {
                 alert("请填写正确的手机号码")
             }else if(res.code == 1003) {
